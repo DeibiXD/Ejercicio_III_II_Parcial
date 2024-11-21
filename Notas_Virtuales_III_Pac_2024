@@ -1,0 +1,575 @@
+Octubre 7
+
+POO
+
+El examen lo pasamos al 21 de octubre, talvez.
+
+Ahora no hay proyecto ni reposicion.
+Son solo 3 examenes y la nota es la suma de las dos mas altos divida por 2.
+
+El tema de hoy es el polimorfismo:
+Es otro principio de la poo
+Tambien llamado especializacion,
+Tengo clases y subclases. (Nos permite hacer metodos mas especificos)
+
+Util cuando multiples subclases derivan de una misma superclase.
+
+Ocurre cuando un programa incova a un metodo a traves de una variable dela super clase.
+
+Objeto de tipo superclase con instacia de una subclase.
+
+En java se le conoce como polimorfismo a la sobrecarga de metodos
+
+Sobrecarga de metodos es solo cuando cambia la cantidad d:e parametros o sus tipos. NO es cuando cambiamos el tipo de retorno del metodo.
+
+Esisten tres tipos de polimorfismo
+Sobrecarga de metodos
+
+Parametrico: Existen funciones o metodos con el mismo nombre pero se usan diferentes parametros. Se seleciona el metodo dependiendo del tipo de datos que se envie
+
+Inclusion
+
+Ejemplo 2: Clase base Vehiculos
+- Subclases: Motos,autos,bicicletas
+
+TAREA: Manejo de excepciones, tipos de enumeracion(enum).
+
+-Arreglos estaticos
+- El for each
+
+
+Octubre 8
+
+Lo que recuerdo de ayer:
+
+Contabilidad I: Ayer vimos temas de los tipos de pasivos, los describimos, vimos la ecuacion que dice que Activo = Pasivo + Capital Contable. Vimos unos tipos de capital contable (creo).
+
+Redes 1: Vimos sobre las capas en una interfaz de un dispositivo de red. Vimos sobre los tipos de cables coaxiales y de cobre, y tambien vimos sobre la fibra optica.
+
+POO: Se vio la idea de polimorfismo con un ejemplo sobre un carro
+
+Clases:
+
+Poo: Las interfaces:
+Ya esta el github de los proyectos visto en clase
+
+Las interfaces puede tener un metodo que se puede implementar en varias clases sin que tengan relacion en comun.
+
+
+La interfaz solo contiene constantes y metodos abstractos.
+
+LEER sobre "Los metodos por defecto", "Funciones Lambda"
+
+TODOS los miembros de la interface son public.
+
+Siempre empezar el nombre de la interface con mayuscula "I".
+
+Para los metodos no hay que declarar explicitamente que son publicos y abstractos
+Clases que implementan una interface, deben implementar los metodos.
+
+Una clase puede implemntar de n interfaces (implements inter1,inter2)
+Una clase puede heredar de 1 clase
+Una clase abstracta puede implementar interfaces sin implementar sus metodos.
+
+Si la clase padre no declara el metodo primero, un objeto de tipo de esa superclase no puede usar un metodo de su subclase
+
+EJERCICIO CUENTASBANCARIAS
+
+tres tipos de cuenta ahorro,cheque,credito (param=numeroCuenta,saldo) (met=deposito(monto),verSaldo=>return numerodeCuenta y saldo, retiro(monto)) (heredan de cuentasBancarias)
+
+cuentasDeAhorro
+saldo(monto): if saldo < monto: print(no) else saldo-monto
+
+cuentasPorCheque
+saldo(monto): lo mismo qeu ahorro
+
+cuentasCredito: dos propiedas double: limiteCredito y InteresDeuda
+retiro(monto): monto a retirar debe ser menor a el resultado de limiteCredito, saldo-valorRet > creditLim
+metodo implementado de una interface: calcularInteres: si el saldo es menor que 0, el interes va ser igual al saldo(positvo) por la tasa de interesDeuda, Saldo+=interes
+
+Octubre 9
+Notas de clase:
+Encapsulamiento:
+Estado de objeto no se puede acceder directamente si tienen un modificador de acceso privado
+
+Abstraccion
+Reducir complejidad de un metodo a un llamada. El que usa el metodo solo sabe lo que hace el metodo, no le interesa la complejidad de lo que se hace. La abstraccion es reducir la complejidad de una funcion o metodo a un llamado
+
+Ejercicio (Recordad tablaHash, HashTable: en medio tiene una funcion hash, una estructura de datos estatica en la memoria se almacenan de manera continua, una dinamica la almacena en cualquier espacio de la memoria(Arbol binario). Ahora el hashMap si se quiere almacenar elementos, cada vez que se asigna un elemento pasa por la funcion hash, lista de collecion. <key,valor> el key no se puede repetir )
+
+crear un hash map <numeroTarjeta, fetchVen> para validar que la tarjeta es usable
+
+e-commerce clase padre (propiedad: montoDePago,metodo:abstract procesarPago,mostrarMonto)
+
+hijos:
+T.C(numeroTarjeto,NombreTarjeta, metodo: procesarPago{print(procesando pago);print(Validadndo num tarjeta);print(Autorizacion )}),
+
+Paypal(propiedad: email, metodo: procesarPago{sysout(paypap)sysout(PagoProcesado)}),
+
+Cripto(propiedad:String direccionCrypto)(metodo,procesarPago(direionHash, generar))
+
+dos objetos de cada uno usando polimorfismo
+
+Patrones de Diseño
+Tres patrones de diseño se veran en clase:
+simpleton, microservicios, Arquitectura dividida por evenetos(en sistemas que hahy concurrencias,existen un framework que tienen librerias para manaejar concurrencias, en sistemas muy concurrentes existe un cola. Ejemplo framework(RabbitMq, Kafka))
+
+Octubre 10
+
+Redes de Datos:
+
+Tabla de entutamiento de host IPv4
+
+Direciones de 224 en adelante son de multicast.
+
+Las ultimas direcciones representan los valores de direcciones IP de broadcast.
+
+La table de enrutamiento de host solo se incluye informacion sobre las redes conectadas directamente. Un host requiere un gateway predeterminado para enviar paquetes a un destino remoto. La tabla de enrutamiento de un router contiene informacion similar pero tambien puede identificar redes remotas especificas.
+
+La tabla de enrutamiento de un router es similar a la tabla de enrutamiento de un host . Ambas identifican lo sigueinte: Red de destino, Metrica asociada a  la red de destino
+gateway para llegar a la red de destino
+
+No hubo clase de POO
+
+Octubre 15 2024
+
+Los patrones de diseño
+
+Los patrones de diseño no deben implementarse directamente en el codigo, el primer lugar deben ir los patrones de diseño es el cerebro.
+
+Una vez que se entienden los patrones diselo en el cerebro, se pueden aplicar estos en el codigo, a los nuevos diseños, y re trabajar su codigo esto con el objetivo de evitar el codigo espagheti
+
+Complejidad Cognitiva(Cultura General)
+
+Frameworks y librerias no son patrones de diseño.
+
+Singleton, Microservicios, Arq. D Eventos.
+Principios SOLID
+
+Singleton: Garantiza una unica creacion de la instancia. No utiliza un constructor public. Archivos de propiedades.
+
+En el proyecto (nuevo): Un proyecto de ejemplo de singleton. Creamos la clase singleton.
+
+Propiedades:(el constructor privado aun es accesible dentro de su clase)
+private static Singleton intanciaUnica;
+Metodos: private Singleton(){}. public static Singleton getInstancia,
+
+Tarea: Investigar como crear un archivo de propiedades, como leerlo desde java (fileReader, BufferedReader). Crear un programa que pueda leer un archivo de propiedades. Este archivo esta compuesto por clave valor(HashMap similar???). El programa es de patron de diseño singleton y debe leer estas propiedades del archivo.
+
+Introduccion a los microservicios:
+Frontend: lo visible
+Backend: Lo logico. conectados a Bases de Datos.
+
+La aplicacion estaba en un todo(FE,BE, y BD en un server). En otras palabras la ariquitectura monolitica. El problema de esto esque es poco escalable.
+
+Los microservicios basicamente separa todo eso y mucho mas en distintos servidores. No tenemos que bajar todos los modulos para hacer mantenimiento a otro. Utilizan a lo que se llama API o mas usado las Rest API's. Una API es un conjunto de servicios. Web services, permiten que dos sistemas distintos se puedan comunicar. Existen dos tipos de webservices. los que vamos a ver en clase son los Rest.
+
+Octubre 16
+Arquitectura dirigida por Eventos
+
+- Modelos de Arquitectura
+- Publicacion/Suscripcion
+- Flujo de Eventos
+- Apache Kafka
+- Rabbit MQ
+
+ADE en POO: Eventos, Disparadores(Triggers), Manejadores
+
+Paquetes, Tipos de enumerado (enum), Manejo de excepciones.
+
+Los paquetes son carpetas que permiten agrupar nuestros objetos o clases.
+
+El concepto de dtos: objetos que nos ayudan a trasnportar datos.
+
+Manejo de excepciones no viene en examen.
+
+Activos: 
+Circulante: Banco, Inversiones temporales, Documentos por cobrar, Clientes, Cuentas por cobrar, Deudores varios, Anticipo al empleado, Inventario de mercaderia, acciones, depositos a plazo corto
+
+Fijo tangible:, Terreno, edificio, maquinaria y equipo, moviliario y equipo, equipo de transporte, equipo de distribuccion o reparto, herramientas, 
+Intangible: credito mercantil, patentes, marcas, derechos de autor
+
+ACTIVO DIFERIDO Y PAGO ANTICIPADO (a largo plazo): gastos de organizacion, gastos de instalacion, gastos de inverstigacion, seguros pagados por anticipado, rentas ("son por anticpado"), impuesto sobre venta pagado, intereses pagados por anticipado, papeleria y utiles, material de empaque, material de aseo, publicidad, 
+
+otros: depositos en garantia , documentos por cobrar a largo plazo. ??? Anticipo a los proveedores
+
+Pasivo: 
+Circulante: Proveedores o cuentas por pagar, documentos por pagar, prestamos bancariso, acredores varios, impuesto sobre la venta cobrado, impuesto sobre la renta a pagar, 
+
+Fijo: documentos por pagar, prestamos bancarios, hipotecas, 
+
+Diferido: rentas cobradas por anticipado, intereses cobrado por anticipado, anticipo de los clientes.
+
+Capital Contable / Patrimonio: origen de fondos, puede ser individual (un solo dueño) o social (mas de un dueño).
+Reserva legal, reserva de reinversion, resultados acumulados, utilidades
+
+
+Octubre 28
+POO: Examen 1 Teorico 12/20
+
+API Rest, Mappers, ORM
+
+Que es una base de datos VIDEOS EN TEAMS.
+
+Las tablas tienen algo llamado llave primaria.
+los campos de una tabla conforman un registros. La llave primaria no se puede repetir y es unico para cada registro de una tabla.
+
+Relacion 1 a multiplo.
+
+Arquitectura de microservicios. webservices: gracias a esto el banco puede comunicarse con la universidad. Terminos como consumir API o webservice.
+
+El enfoque es en el desarrollo de los web services.
+
+El frontend y el backend. El webservice se ejecuta en backend, el frontend lo consume.
+Tipos de webservices (o arquitectura de webservices): SOAP (arhivos wsdl) "como un contrato" "otro metodo, generar el wdsl otra vez, eso no es muy escalable", API Rest: Usa protocolos o verbos HTTP: el get,post,delete,put.
+
+URL: Esta tiene la direccion para llegar a usar los protocolos HTTP.
+
+Usar Java, Spring Boot (Framework), Maven (Project Manager).
+
+Una arquitectura monolitica: es una ariquitectura donde todo esta construido como un todo, osea que un servidor tiene la base de datos, el BE, y el FE. Si algo se debe modificar entonces se debe bajar todo el servidor.
+
+Microservicios: La aplicacion se construye de manera independiente, entonces que distintos servidores para cada servicio. Un servidor de aplicaciones, un servidor donde se ejecutan una aplicacion web.
+
+Oct 29
+
+POO:
+Parametros de projecto Spring Boot en clase
+ - Version Spring Boot 3.2.11
+ - Packaging type jar
+ - Version java 17
+ - Spring Boot dev tools: sirve cuando se esta haciendo un cambio sobre la aplicacion, el mismo lo reinicia.
+ -Spring Web ayuda a crear las api rest
+ - Dependencias oblitgatorias: Spring Boot, Spring Web , lombook (despues)
+
+Extra: pagina de spring initializr start.spring.io: le da un archivo comprimido que se puede extraer una carpeta donde esta el projecto
+
+- El arhcivo de la metadata es pom.xml
+- Descripcion y muchas cosas
+
+- DemoApplication.java: encargada del bootstraping
+- El concepto de bootstraping
+- Servidores de aplicaciones: tomcat, Was, weblogic, payora. Son programas que se encargen que una vez se instalan una app, estan disponible en la web.
+
+- Al dar run se levanta, el projecto levanta tomcat en el puerto 8080
+- application.properties
+
+- controladores (Minuto 23-25 no se). La puerta de entrada que recibe las peticiones
+
+- Puertas de entrada (controladores), metodo web
+
+- todas las paquetes se deben hacer en carpeta del NOMBRE DEL PROYECTO. sino se debe poner @ComponentScan(hn.unah)
+
+- A clases controlladores agregar el @RestController.
+- @RequestMapping parar ponerle una URL al controlador
+
+Oct 30
+POO:
+FQDN: hasta donde esta el mapping del controlador
+
+Cunado estamos crenado metodos a veces es necesario a esa informacion addicional le llamamos parametros
+
+Tipos de Parametros
+
+Tipos de parametros
+RequestParam: informacion adicioneal
+PathVariable: URL
+Payload,Body: Objeto
+
+Descargar el Postman
+Herramientas para prbar servicios de las apis rest:
+add collection, add a request, Get por GETMapping,
+Codigo 200 es OK
+
+Payload: @RequestBody, archivo XML?? una forma de enviar informacion, archivo JSON (Javascript Objet Notation) el que vamos a usar
+Serializacion y Deserializacion
+
+List<Alumno>
+
+Con el codigo subido por el instructor
+
+Crear metodo en el controllador Alumno Controlador
+
+Metodo que reciba pathVariable que se llama buscar por Cuenta
+
+Metodo eliminar por cuenta: si existe eliminar. RequestParam NumeroCuenta
+
+Metodo: actualizar ( PathVariable String numeroCuenta, RequestBody Alumno alumnoNuevaData). El "alumno con lo que queremos modificar"
+
+Hacer un Proyecto? o Examen III?.
+
+Organizar el proyecto de forma de una API, con controladores que son clases que reciben peticiones HTTP
+
+Servicios, la logica de nuestra aplicacion
+
+Cuando alla acceso a base de datos, los repositiorios trabajan para poder construir una conexion o interfaz a la base de datos, como un puente a la base de datos. Cada repositorio va a ser parametrisado con un modelo. Un modelo va a representar una tabla(que tiene campos) en la BD. El modelo es una clase de java que se va a tener propiedades (estandar para la clase) cada propiedad debe mapaerse a un campo con al tipo de dato (de la BD). ORM, Object relational mapping, este nos permite trabajar las tablas de la base como ???.
+
+TAREA: Leer sobre que es ORM Hibernate.
+
+Los componentes de spring boot son todos los anotados.
+
+Crear paquee services. Como el controlador de Alumno es AlumnoController, AlumnoSercie.
+
+Poner @services
+??@ScanComponent en main
+
+Se crea la List listaAlumnos
+importar Alumno
+importar java.util.List
+
+SOLO en el controlodar debemos especificar parametros de peticion.
+
+Asegurar que ambos devuelven lo mismo.
+
+EXISTE UNA ANOTACION PARA injectar un objeto de ese tipo a la clase. Esto es inyeccion Dependencias.
+@Autowired
+
+Noviembre 5
+La Base de Datos es MySQL
+Se va a hacer un crud
+
+Puede usar wamp server
+Adentro de el usar phpMyAdmin
+Tambien se puede usar mySqlWorkbench
+
+Vamos a hacer una aplicacion de subcripciones (Este es el nombre de la BD)
+Tablas:
+
+Clientes: DNI(PK),nombre,apellido,correo,telefono,fechaIngreso
+
+TUtorial: crear nuevo schema
+
+sentencia sql: use suscripciones;
+
+create table clientes (
+dni varchar(18),//tipo String
+nombre varchar(30),
+apellido varchar(30)
+...
+primary ley(dni)
+);
+
+select * from clientes;
+
+// Fin
+
+Ahora crear el proyecto
+dependecia = libreria // en esta clase
+nuevas dependecias necesarias
+jpa, mysql connector,
+
+mvn repository pagina web
+
+en application.properties
+
+identificamos que base de datos vamos a usar, snippet proveido por profesor
+Si tdoo esta bien el Spring se levantara. La Base de datos se debe conectar
+
+Estructura de API:
+|-> Controladores --> Servicios --> Repositorios<Modelos>//a.k.a las tablas
+
+crear los paquetes de controladores,dtos,mdoelos,repositorios, y servicios.
+
+Un registro de la tabla debe ser un objeto.
+
+Crear clase Cliente, propiedades con mismo nombre de las columnas en la tabla
+
+PRECAUCION: LOS NOMBRES DEBEN SER IGUALES
+
+Nueva dep: lombok
+
+Debe haber un contructor vacio y uno con todo los datos
+
+Con la anotacion @Getter, todos los campos automaticamente tienen getters y setters.
+
+Decirle a la clase que es una @Entity (Va a mapear automaticamente)
+@Table // En caso de no tener la clase con el mismo nombre que la tabla
+
+Nov 6
+
+Redes
+
+Meta relizar ejercicio de spanning tree y rapid spanning tree
+
+En Nov 7 no hay clase pero si va haber una grabacion: De port chane, siguiente semana es tema de enrutamiento. Pero en las presentaciones se deberia discutir mas sobre esos temas.
+
+Colocar dos switch para visualizar el tema del bucle.
+Se puede visualizar el puerto bloqueado cuando tenemos dos conectores entre dos switch.
+
+show sp -> 
+Nos dice que la unica vlan entre los dos, es un puerto alternativo, el cual se quita del camino del root port. El root port es el camino hacia el root bridge. Si halgo le pasa al root port,
+
+Forwarding significa que esta para hacer comunicacion de bdpu, mac address, etc.
+
+enable
+conf t 
+inter fa0/1
+shut
+
+//El puerto se apaga -> inicialmente  esta en learning -> se toma mucho en PT
+
+Forwarding se visualiza como verde en PT.
+
+Estan pasando bpdu's. Los puertos deciden quien es el root bridge. Hay un numero de prioridad, si todos son iguales (no configurados), se usa la mac address mas baja como prioridad.
+Parece ser que los mac addres de los equipos incrementan de acuerdo a cuando los ponemos. Primer equipo que se puso parece tener la mac address mas baja.
+
+Switch 1 parece tener la mac address mayor.
+
+Todo esta bajo la VLAN 1.
+
+El SPANNING TREE es POR VLAN.
+
+Prioridad 32769 es el default con las que vienen todos los siwtch.
+
+Se hace simulacion ismp. Se esta visualizndo el camino que esta tomando el paquete entre los switches conectados.
+La prioridad cambio y ahora switch 2 es el root bridge. Se se cae swicth 0 sera el root bridge.
+
+ping -t address. --> Ping extendido
+Se quito un cable mientrar se hacia el ping. El spanning tree se esta tartando demasiado en habilitar el puerto que estaba en color ambar.
+
+Ahora reconnectamos el cable. El switch 0 se apaga casi de inmediato. La interfaz al root bridge se carga otra vez y otra vez tarda demasiado en levantarse.
+
+Para mejorar estos tiempos de demora utilizamos el rapid spanning tree.
+
+Solo hay que HABILITARLO en TODOS LOS SIWTCH
+
+(mode conf term)spanning-tree mode mode rapid-....
+rstp(rapid spanning tree protocol)
+
+Volvio solo botando un paquete. El efecto es el mismo si disconectamos uno de los tres cables.
+
+type -> P2p
+Deberia a ver un type edge cuando es conexion a host no en P2p. Sin embargo esto no se puede en packet tracer??
+
+config-if spanning portfast enable // No funciono
+
+--> Ahoro otro ejercicio, topologia de switches igual con mas hosts. Ahora tendremos mas vlans ademas de la default(1).
+Switch 4 y switch 5 tienen dos pc.
+Vamos a usar vlans distintas a las que son por defecto. Para que esto funciona ocupamos crear puertos troncales
+
+vlan 150
+name SAC 
+vlan 160
+name Ventas
+
+spanning tree mode
+
+interfaces range fa0/1-2
+switchport mode trunk
+switchport trunk allowed vlan 1,150,160
+switchport trunk native vlan 1
+
+interface fa0/3
+switchport mode access 
+switchport access vlan 150
+
+interface fa0/4
+siwtchport mode acccess 
+switchport acccess vlan 160
+
+////////////
+
+Hacer el switch 3 root bridge de forma manual
+
+spanning tree vlan ... priority ...
+
+Podemos decir que hay distintos rootbridge dependiendo de la vlan
+
+Me perdi minuto 39-41
+
+Nov 7 del 2024
+
+Redes: EtherChannel Bundles
+Puede llamarse distinto dependiendo de la marca.
+
+Si tenemos una interface que esta saturada, lo que se ocupa es talvez otro enlace sin importar la distancia. El spanning tree detecta el buche y asigna el root bridge.
+
+Tenemos que evitar que el spanning tree detecte el bucle y hacer las conexiones como member interfaces y logical interfaces.
+
+Antes llamada EtherChannel ahora es Portchannel.
+
+Se ve como si fuera una solo conexion. Puede sen capa 2 o 3. Si son capa 2 pueden ser access o trunk. Cuando es capa 3 podemos darle un Ip address y no espera ha ser ruteado.
+
+Equipos que transportan hilos a distancia larga. DWDM
+
+Interface Logica con los miembros links.
+
+LACP: Protocolo de control de agregacion de enclaces (LACP). estandar
+
+PAgP: Propiedad de cisco. anuncia mensajes con la direccion MAC de multicast y el codigo de protocolo . PAgP puede funcionar.
+
+PAgP se puede configurar de forma auto y modo desirable. Si dos es tan auto, nadie intenta establece el EtherChannel.
+
+POO:
+
+No debemos exponer nuestra entidad.
+obtenerTodos lo hicimos con findAll.
+obtenerUno lo hacemos con findById
+eliminarUnRegistro (2 maneras) -> findById delete o deleteById
+
+Crear el clienteDTO. Tiene la misma estructura que cliente pero debemos quitar lo que referencia a la BD.
+
+para evitar el setCampo(getCampo) que hace mucho codigo usamos una dependecia:
+modelMapper: Se uso el 3.20
+
+Usar el metodo modelMapper.map y .class
+
+obtenerTodos ahora debe retornar un dto, retornar lista de clientes del dto
+
+Pasar a singleton para una sola entidad
+
+PostMapping para insertar en la base de datos.
+El request body recibe un dto.
+Este es el metodo de crearNuevoCliente
+
+Tarea:
+
+DeleteMapping para e
+
+Nov 12 del 2024
+Examen Teorico: Lunes 18
+Examen Practico:  Jueves 21
+
+Crear metodo actualizarCliente (String dni, ClienteDTO clienteInfoActualizada)
+...Repositorio.existsById(dni) retorna boolean
+El metodo .save sirve para insertar si no existe o actualizar
+
+El modificador de acceso Optional. Si no existe el parametro solo nos retorna: null, en lugar de server error 500
+
+Save va a hacer un nuevo registro si le enviamos un body con una primary key distinta, ya que ese es su identificador unico.
+
+TEMA: Relaciones en Bases de Datos
+
+One to One: Una tabla tienen un campo con llave foreana que tiene un registro unico en otra tabla. Si no existe el campo en la otra tabla entonces es nulo. El campo debe exister de dni deben estar.
+
+Los campos identity, tienen contador, al agregar se agrega. Auto incrementacion.
+
+TODA llave foreana debe ser primaria en otra tabla.
+
+La dueña de la relacion es el que tiene definida la llave foreana.
+
+Ej: Una direccion por persona.
+
+Primero crear el modelo: El que conecta un objeto a los campos de la base de datos.
+SI es un valor generado se debe poner GeneratedValue(strategy = GenerationType.IDENTITY)
+
+Nov 13:
+
+@OneToOne(cascade = CascadeType.ALL) //Relacion entre la tabla, el parametro indica como afecta las operaciones en ambas tablas
+@JoinColumn(name="dni", referencesColumnName ="dni") //campo relacionada en la otra tabla. El primer parametro indica como se llama en esta tabla, el siguiente parametro indica como se llama en la otra tabla
+private Cliente cliente;
+
+Actualizacion en cascada, las operaciones como actualizar o eleminar se realizanen ambos campos de ambas tablas
+
+Ahora vamos a la tabla Clientes (el objeto de la tabla cliente)
+Debemos agregar un attributo de tipo Direcciones y darle la misma anotacion de OneToOne
+
+@OneToOne(mappedBy = "cliente")
+private Direcciones direccion;
+
+insert into direcciones(departament,ciudad,colonia,dni)
+values()
+
+Ahora ha hacer debug porque la direccion se esta dejando nulo. Minuto 33-38, no preste atencion
+
+Parece que el modelMapper ah perdido la direccion del clinte de la base de dtosal dto.
